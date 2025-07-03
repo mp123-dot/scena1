@@ -115,7 +115,7 @@ function mousePressed() {
     typeof btnR !== "undefined" &&
     dist(mouseX, mouseY, btnX, btnY) < btnR
   ) {
-    window.open("https://mp123-dot.github.io/scena2/", "_self");
+   window.location.href = "https://mp123-dot.github.io/scena2/";
   }
 }
 
