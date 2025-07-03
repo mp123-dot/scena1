@@ -107,7 +107,10 @@ function mousePressed() {
     glitterParticles.push(new Glitter(mouseX, mouseY));
   }
 
-  // brak przejścia do żadnej innej sceny
+  // przejście do scena2 po kliknięciu w przycisk DALEJ
+  if (dalejVisible && dist(mouseX, mouseY, btnX, btnY) < btnR) {
+    window.location.href = "https://mp123-dot.github.io/scena2/";
+  }
 }
 
 /***************** WINDOW RESIZED *****************/
@@ -154,8 +157,3 @@ class Glitter {
     ellipse(this.x, this.y, this.size);
   }
 }
-
-
-
-
-
