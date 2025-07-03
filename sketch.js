@@ -115,10 +115,7 @@ function mousePressed() {
     typeof btnR !== "undefined" &&
     dist(mouseX, mouseY, btnX, btnY) < btnR
   ) {
-    // Opóźnienie na czas animacji brokatu
-    setTimeout(() => {
-      window.location.href = "https://mp123-dot.github.io/scena2/";
-    }, 150);
+    window.open("https://mp123-dot.github.io/scena2/", "_self");
   }
 }
 
@@ -163,6 +160,4 @@ class Glitter {
   show() {
     noStroke();
     fill(this.color);
-    ellipse(this.x, this.y, this.size);
-  }
-}
+    ellipse(this.x, this.y, this.size);}}
