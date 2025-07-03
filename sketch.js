@@ -108,8 +108,17 @@ function mousePressed() {
   }
 
   // przejście do scena2 po kliknięciu w przycisk DALEJ
-  if (dalejVisible && dist(mouseX, mouseY, btnX, btnY) < btnR) {
-    window.location.href = "https://mp123-dot.github.io/scena2/";
+  if (
+    dalejVisible &&
+    typeof btnX !== "undefined" &&
+    typeof btnY !== "undefined" &&
+    typeof btnR !== "undefined" &&
+    dist(mouseX, mouseY, btnX, btnY) < btnR
+  ) {
+    // Opóźnienie na czas animacji brokatu
+    setTimeout(() => {
+      window.location.href = "https://mp123-dot.github.io/scena2/";
+    }, 150);
   }
 }
 
